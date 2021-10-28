@@ -17,6 +17,7 @@ namespace Shopping.MVC.Controllers
         }
 
         [HttpGet]
+        public IActionResult IngresoAlta() => View();
 
         [HttpPost]
         public IActionResult IngresoAlta()
@@ -24,6 +25,16 @@ namespace Shopping.MVC.Controllers
             Local.AltaIngreso();
             
             return View("Bienvenido, ingreso aceptado");
+        } 
+
+        [HttpGet]
+        public IActionResult AltaLocal() => View();
+
+        [HttpPost]
+        public IActionResult AltaLocal()
+        {
+            VMLocal.()
+            return View("El local fue dado de alta", );
         }
     }
 }

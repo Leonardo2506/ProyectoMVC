@@ -5,13 +5,15 @@ namespace Shopping.Core
 {
     public class Local
     {
-        public int idSucursal {get; set;}
+        public int Sucursal {get; set;}
 
         public string Nombre {get; set;}
 
         public int Direccion {get; set;}
 
         public int CantMax {get; set;}
+
+        public Persona persona; 
 
         List<Registro> Entrada {get; set;}
 
@@ -20,7 +22,7 @@ namespace Shopping.Core
         public Local()
         {}
 
-        public Local ()
+        public Local()
         {
             Entrada = new List<Registro>{};
 
@@ -50,7 +52,7 @@ namespace Shopping.Core
         {
             if(PuedeIngreso() == true)
             {
-                Entrada.Add(new Registro(DateTime.now))
+                Entrada.Add(new Registro(DateTime.now));
             }
         }
 
