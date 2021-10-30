@@ -9,14 +9,6 @@ namespace Shopping.Core
 
         static int Id = 1; 
 
-        static readonly List<Persona> personas = new List<Persona>();
-
-        public static IEnumerable<Persona> Personas 
-            => personas;
-
-        public static Persona GetPersona(int Id)
-            => personas.Find(p => p.id == Id);
-
         public static void AgregarPersona(Persona persona)
         {
             persona.id = Id++;
@@ -24,8 +16,6 @@ namespace Shopping.Core
         }
 
         public static void EliminarPersona(Persona persona)
-        {
-            
-        }
+            => persona.RemoveAll()
     }
 }
