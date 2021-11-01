@@ -9,13 +9,21 @@ namespace Shopping.Core
 
         static int Id = 1; 
 
-        public static void AgregarPersona(Persona persona)
+        static readonly List<Registro> Entrada = new List<Registro>();
+
+        static readonly List<Registro> Salida = new List<Registro>();
+
+        public static List<Registro> Entrada => entrada; 
+
+        public static List<Registro> Salida => salida; 
+
+        public static void AgregarEntrada(Registro registro)
         {
-            persona.id = Id++;
-            persona.Add(persona); 
+            entrada.Registro = registro++;
+            entrada.Add(registro); 
         }
 
-        public static void EliminarPersona(Persona persona)
+        public static void EliminarEntrada(Persona persona)
             => persona.RemoveAll()
     }
 }
