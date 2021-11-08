@@ -13,17 +13,29 @@ namespace Shopping.MVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Repositorio.Personas);
         }
 
+        public IActionResult Detalle(int Id)
+        {
+            var persona = Repositorio.GetPersona(Id); 
+            if(persona is null)
+            {
+                return NotFound(); 
+            }
+            return View(persona); 
+        } 
+
         [HttpGet]
-        public IActionResult PersonaACargo() => View();
+        public IActionResult DarAltaPersona() => View(); 
 
         [HttpPost]
-        public IActionResult PersonaACargo(Persona persona) 
+        public IActionResult DarAltaPersona(Persona persona) 
         {
             Repositorio.AgregarPersona(persona);
             return View("El local esta a cargo por", persona);
         }
+
+        
     }
 }

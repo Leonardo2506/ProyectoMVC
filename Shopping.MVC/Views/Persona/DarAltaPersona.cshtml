@@ -1,0 +1,37 @@
+@model Shopping.MVC.Persona
+@{
+    Layout = null;  
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registro Local - Persona </title>
+</head>
+<body>
+    <form action="DarAltaPersona" method="post">
+        <div asp-validation-summary = "All"></div>
+
+        <div>
+            <label asp-for="Nombre"> Nombre: </label>
+            <input asp-for="Nombre">
+        </div>
+        <div>
+            <label asp-for="Apellido"> Apellido</label>
+            <input asp-for="Apellido">
+        </div>
+        <div>
+            <select asp-for="SucursalSeleccionado">
+                <option value=""> Asigne el Local </option>
+                @foreach (Shopping.Core.Local local in Model.Locales)
+                {
+                    <option value="@local.Sucursal">@local.Nombre</option>
+                }
+            </select>
+        </div>
+        <button type="submit"> Enviar Datos </button>
+    </form>
+</body>
+</html>

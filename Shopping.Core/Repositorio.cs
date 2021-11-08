@@ -25,22 +25,23 @@ namespace Shopping.Core
 
         static readonly List<Local> locales = new List<Local>();
         
-          
+        public static IEnumerable<Local> Locales
+            => locales; 
+        
+        public static Local GetLocal(int Sucursal)
+            => locales.Find(c => c.Sucursal == Sucursal);
+
+        public static void AgregarLocal(Local local)
+        {
+            local.Sucursal = Sucursal++;
+            locales.Add(local); 
+        }
+
         static readonly List<Registro> registros = new List<Registro>();
-
-        //static readonly List<Registro> Entrada = new List<Registro>();
-
-        //static readonly List<Registro> Salida = new List<Registro>();
 
         public static List<Registro> Entrada => entrada; 
 
         public static List<Registro> Salida => salida; 
-
-        //public static void AgregarEntrada(Registro registro)
-        //{
-           //entrada.Registro = registro++;
-            //entrada.Add(registro); 
-        //}
 
     }
 }
