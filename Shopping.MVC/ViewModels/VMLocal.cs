@@ -5,20 +5,20 @@ namespace Shopping.ViewModels
 {
     public class VMLocal
     {
-        public Local local {get; set;}
+        public Local Local {get; set;}
 
         public IEnumerable<Persona> Personas { get; set; }
 
         public int? id { get; set; } 
 
-        public VMLocal() => local = new Local();
+        public VMLocal() => Local = new Local();
 
         public VMLocal(IEnumerable<Persona> personas): this()
                 => Personas  =  personas;
 
-        public VMLocal(Local local)
+        public VMLocal(Local Local)
         {
-            Local = local; 
+            Local = this.Local; 
         }
 
         public static void AgregarLocal(Local local) 

@@ -15,26 +15,5 @@ namespace Shopping.MVC.Controllers
         {
             return View();
         }
-
-        [HttpGet]
-        public IActionResult IngresoAlta() => View();
-
-        [HttpPost]
-        public IActionResult IngresoAlta()
-        {
-            Local.AltaIngreso();
-            
-            return View("Bienvenido, ingreso aceptado");
-        } 
-
-        [HttpGet]
-        public IActionResult AltaLocal() => View();
-
-        [HttpPost]
-        public IActionResult AltaLocal()
-        {
-            VMLocal.()
-            return View("El local fue dado de alta", );
-        }
     }
 }

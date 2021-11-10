@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq; 
 
 namespace Shopping.Core
@@ -13,14 +14,15 @@ namespace Shopping.Core
 
         public int CantMax {get; set;}
 
-        public Persona persona; 
+        public Registro Registro {get; set;}
 
-        List<Registro> Entrada {get; set;}
+        public Persona persona {get; set;} 
 
-        List<Registro> Salida {get; set;}
+        public DateTime FechaHora {get; set;}
 
-        public Local()
-        {}
+        public List<Registro> Entrada {get; set;}
+
+        public List<Registro> Salida {get; set;}
 
         public Local()
         {
@@ -29,19 +31,18 @@ namespace Shopping.Core
             Salida = new List<Registro>{}; 
         }
 
-        private bool EsHoy(DateTime FechaHora)
-        {
-            var Hoy = DateTime.Today; 
+        public int EntradasDelDia
+            => Entrada.Count(e => e.EsHoy(FechaHora));
 
-            return Hoy.Year == fecha.Year && Hoy.Month == fecha.Month && Hoy.Day == fecha.Day; 
-        }
+        public int SalidasDelDia 
+            => Salida.Count(e => e.EsHoy(FechaHora));
 
         public int Disponibilidad
-            => CantMax - (EntradasDelDia - SalidasDelDia);
+            => CantMax - (SalidasDelDia - EntradasDelDia);
 
         public bool PuedeIngreso()
         {
-            if(Disponibilidad => 1)
+            if(Disponibilidad >= 1)
             {
                 return true; 
             }
@@ -52,22 +53,16 @@ namespace Shopping.Core
         {
             if(PuedeIngreso() == true)
             {
-                Entrada.Add(new Registro(DateTime.now));
+                Entrada.Add(new Registro(this, DateTime.Now));
             }
         }
 
-        public void AltaEgreso()
+        public void AltaEgreso(Registro registro)
         {
-            Entrada.RemoveAt(DateTime.now); 
+            Entrada.Remove(registro); 
 
-            Salida.RemoveAt(DateTime.now); 
+            Salida.Add(registro); 
         }
-
-        public int EntradasDelDia
-            => Entrada.Count(EsHoy(e => e.EsHoy(e)));
-
-        public int SalidasDelDia 
-            => Salida.Count(EsHoy(e => e.EsHoy(e)));
 
         public int CantidadClientes()
         {

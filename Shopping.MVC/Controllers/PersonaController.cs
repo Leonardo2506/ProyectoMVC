@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shopping.MVC.Models;
+using Shopping.Core;
 
 namespace Shopping.MVC.Controllers
 {

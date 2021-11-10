@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Shopping.Core
 {
-    public static class Reposito
+    public static class Repositorio
     {
         static int Sucursal = 1;
 
@@ -39,9 +39,6 @@ namespace Shopping.Core
 
         static readonly List<Registro> registros = new List<Registro>();
 
-        public static List<Registro> Entrada => entrada; 
-
-        public static List<Registro> Salida => salida; 
 
     }
 }

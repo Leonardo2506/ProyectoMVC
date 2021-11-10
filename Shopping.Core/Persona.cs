@@ -4,7 +4,7 @@ namespace Shopping.Core
 {
     public class Persona
     {
-        public int id {get; set;}
+        public int Id {get; set;}
 
         public string Nombre {get; set;}
 
