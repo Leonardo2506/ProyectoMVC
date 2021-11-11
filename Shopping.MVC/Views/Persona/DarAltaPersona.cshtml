@@ -1,4 +1,4 @@
-@model Shopping.MVC.Persona
+@model Shopping.Core.Persona
 @{
     Layout = null;  
 }
@@ -21,15 +21,6 @@
         <div>
             <label asp-for="Apellido"> Apellido</label>
             <input asp-for="Apellido">
-        </div>
-        <div>
-            <select asp-for="SucursalSeleccionado">
-                <option value=""> Asigne el Local </option>
-                @foreach (Shopping.Core.Local local in Model.Locales)
-                {
-                    <option value="@local.Sucursal">@local.Nombre</option>
-                }
-            </select>
         </div>
         <button type="submit"> Enviar Datos </button>
     </form>
