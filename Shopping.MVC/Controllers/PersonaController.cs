@@ -27,7 +27,7 @@ namespace Shopping.MVC.Controllers
         public IActionResult DarAltaPersona(Persona persona) 
         {
             Repositorio.AgregarPersona(persona);
-            return View("El local esta a cargo por", persona);
+            return View("El local esta a cargo por ", Repositorio.Personas);
         }
 
         

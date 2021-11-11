@@ -13,11 +13,26 @@
 <body>
     <h4> Persona a Cargo </h4>
 
-    <a asp-action="DarAltaPersona"> Ingrese aqui a alguien a cargo del Local</a>
-
+    <a asp-action="DarAltaPersona"> Ingrese aqui a alguien a cargo del Local</a><br />
     <table>
-            
-    </table>    
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>LugarTrabajo</td>
+            </tr> 
+        </thead>
+    
+            <tbody>
+                @foreach (Shopping.Core.Persona persona in Model)
+                {
+                 <tr>
+                     <td><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Nombre</a></td>
+                     <td><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Apellido</a></td>
+                 </tr>  
+                }
+            </tbody>
+    </table>
 </body>
 </html>
 
