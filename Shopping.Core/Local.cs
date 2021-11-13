@@ -10,7 +10,7 @@ namespace Shopping.Core
 
         public string Nombre {get; set;}
 
-        public int Direccion {get; set;}
+        public string Direccion {get; set;}
 
         public int CantMax {get; set;}
 
