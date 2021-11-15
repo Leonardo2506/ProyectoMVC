@@ -27,7 +27,7 @@ namespace Shopping.MVC.Controllers
         public IActionResult DarAltaLocal(Local local)
         {
             Repositorio.AgregarLocal(local); 
-            return View("El local que fue asignado es: ", Repositorio.Locales); 
+            return View("El local fue ingresado"); 
         }
     }
 }

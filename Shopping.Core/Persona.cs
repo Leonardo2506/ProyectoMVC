@@ -1,4 +1,6 @@
-using System; 
+using System;
+using System.Collections.Generic;
+using System.Linq; 
 
 namespace Shopping.Core
 {
@@ -10,7 +12,11 @@ namespace Shopping.Core
 
         public string Apellido {get; set;}
 
+        public List<Local> locales {get; set;}
+
         public Persona()
-        {}
+        {
+            locales = new List<Local>{};
+        }
     }
 }
