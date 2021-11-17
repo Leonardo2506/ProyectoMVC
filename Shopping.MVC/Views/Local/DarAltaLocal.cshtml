@@ -1,4 +1,5 @@
-@model Shopping.Core.Local
+@using Shopping.Core;
+@model Tuple<Local, IEnumerable<Persona>>
 @{
     Layout = null; 
 }
@@ -15,20 +16,22 @@
         <div asp-validation-summary = "All"></div>
         
         <div>
-            <label asp-for="Nombre"> Nombre: </label>
-            <input asp-for="Nombre">
+            <label asp-for="Item1.Nombre"> Nombre: </label>
+            <input asp-for="Item1.Nombre">
         </div>
 
         <div>
-            <label asp-for="Direccion"> Direccion: </label>
-            <input asp-for="Direccion">
+            <label asp-for="Item1.Direccion"> Direccion: </label>
+            <input asp-for="Item1.Direccion">
         </div>
 
         <div>
-            <label asp-for="CantMax"> Cantidad Maxima: </label>
-            <input asp-for="CantMax">
+            <label asp-for="Item1.CantMax"> Capacidad: </label>
+            <input asp-for="Item1.CantMax">
         </div>
-        <button type="submit"> Enviar Datos </button>
+
+
+        <button type="submit">Enviar Datos </button>
     </form>
 </body>
 </html>

@@ -14,8 +14,6 @@ namespace Shopping.Core
 
         public int CantMax {get; set;}
 
-        public Registro Registro {get; set;}
-
         public Persona persona {get; set;} 
 
         public DateTime FechaHora {get; set;}

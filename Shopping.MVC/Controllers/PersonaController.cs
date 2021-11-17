@@ -17,7 +17,7 @@ namespace Shopping.MVC.Controllers
             {
                 return NotFound(); 
             }
-            return View("Detalle"); 
+            return View(persona); 
         } 
 
         [HttpGet]
@@ -27,7 +27,7 @@ namespace Shopping.MVC.Controllers
         public IActionResult DarAltaPersona(Persona persona) 
         {
             Repositorio.AgregarPersona(persona);
-            return View("Notificacion");
+            return View("Notificacion", persona);
         }
 
         
