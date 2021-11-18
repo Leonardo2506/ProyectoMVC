@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc; 
 using Shopping.Core; 
 using System;
-using System.Collections.Generic;
 
 namespace Shopping.MVC.Controllers
 {
@@ -30,9 +29,9 @@ namespace Shopping.MVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult DarAltaLocal(Tuple<Local, IEnumerable<Persona>> tuple)
+        public IActionResult DarAltaLocal([Bind(Prefix = "Item1")]Local local)
         {
-            Repositorio.AgregarLocal(tuple.Item1); 
+            Repositorio.AgregarLocal(local); 
             return View("Index", Repositorio.Locales); 
         }
     }

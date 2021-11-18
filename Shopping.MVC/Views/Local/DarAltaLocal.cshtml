@@ -30,6 +30,15 @@
             <input asp-for="Item1.CantMax">
         </div>
 
+        <div>
+            <select asp-for="Item2">
+                <option value=""> Elegir a una persona a cargo </option>
+                @foreach (Shopping.Core.Persona persona in Model.Item2)
+                {
+                    <option value="Item2.Id"> @persona.Nombre </option>
+                }
+            </select>
+        </div>
 
         <button type="submit">Enviar Datos </button>
     </form>

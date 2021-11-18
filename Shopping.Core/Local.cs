@@ -14,7 +14,7 @@ namespace Shopping.Core
 
         public int CantMax {get; set;}
 
-        public Persona persona {get; set;} 
+        public List<Persona> personas{get; set;}
 
         public DateTime FechaHora {get; set;}
 
