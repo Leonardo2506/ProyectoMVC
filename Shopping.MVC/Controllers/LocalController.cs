@@ -28,6 +28,16 @@ namespace Shopping.MVC.Controllers
             return View(tupla);
         }
 
+        [HttpGet]
+        public IActionResult DarAltaLocal(int? IdPersonaSeleccionada)
+        {
+            var tupla = Tuple.Create(new Local(), Repositorio.Personas);
+            {
+                IdPersonaSeleccionada = Repositorio.Personas.Id;
+            }
+            return View(tupla);
+        }
+
         [HttpPost]
         public IActionResult DarAltaLocal([Bind(Prefix = "Item1")]Local local)
         {
