@@ -26,11 +26,10 @@ namespace Shopping.Core
 
         static readonly List<Local> locales = new List<Local>();
         
-        public static IEnumerable<Local> Locales
-            => locales; 
+        public static IEnumerable<Local> Locales => locales; 
         
-        public static Local GetLocal(int Sucursal)
-            => locales.Find(c => c.Sucursal == Sucursal);
+        public static Local GetLocal(int sucursal)
+            => locales.Find(c => c.Sucursal == sucursal);
 
         public static void AgregarLocal(Local local)
         {

@@ -11,9 +11,9 @@ namespace Shopping.MVC.Controllers
             return View(Repositorio.Locales); 
         }
 
-        public IActionResult Detalle(int Sucursal)
+        public IActionResult Detalle(int sucursal)
         {
-            var local = Repositorio.GetLocal(Sucursal);
+            var local = Repositorio.GetLocal(sucursal);
             if(local is null)
             {
                 return NotFound(); 

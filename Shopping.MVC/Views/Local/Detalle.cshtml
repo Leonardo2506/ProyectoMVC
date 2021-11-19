@@ -1,4 +1,5 @@
-@model Shopping.Core.Local
+@using Shopping.Core;
+@model Tuple<Local, IdSeleccionado>
 @{
     Layout = null;
 }
@@ -12,23 +13,14 @@
 </head>
 <body>
     <div> 
-        <h3> Nombre: @Model.Nombre </h3>    
+        <h3> Nombre: Item1.Nombre </h3>    
     </div>
     <hr>
     <table>
         <thead>
-            <td> Direccion</td> 
-            <td> Cantidad Maxima </td> 
-            <td> Persona A Cargo </td> 
-            <tbody>
-               
-            @foreach (Shopping.Core.Persona persona in Model.personas)
-            {
-                <tr>
-                    <td>@persona.Nombre</td>
-                </tr>
-            }
-        </tbody>
+            <tr><td> Direccion: Item1.Direccion</td></tr> 
+            <tr><td> Cantidad Maxima: Item1.CantMax </td></tr>
+            <tr><td> Persona A Cargo: Item2.Persona.Nombre </td></tr>
         </thead>
     </table>
     <hr/>
