@@ -1,5 +1,5 @@
-@using Shopping.Core;
-@model Tuple<Local, IEnumerable<Persona>>
+@using Shopping.ViewModels;
+@model VMLocal;
 @{
     Layout = null; 
 }
@@ -16,26 +16,26 @@
         <div asp-validation-summary = "All"></div>
         
         <div>
-            <label asp-for="Item1.Nombre"> Nombre: </label>
-            <input asp-for="Item1.Nombre">
+            <label asp-for="Local.Nombre"> Nombre: </label>
+            <input asp-for="Local.Nombre">
         </div>
 
         <div>
-            <label asp-for="Item1.Direccion"> Direccion: </label>
-            <input asp-for="Item1.Direccion">
+            <label asp-for="Local.Direccion"> Direccion: </label>
+            <input asp-for="Local.Direccion">
         </div>
 
         <div>
-            <label asp-for="Item1.CantMax"> Capacidad: </label>
-            <input asp-for="Item1.CantMax">
+            <label asp-for="Local.CantMax"> Capacidad: </label>
+            <input asp-for="Local.CantMax">
         </div>
 
         <div>
-            <select asp-for="Item2">
+            <select asp-for="IdPersonaSeleccionada">
                 <option value=""> Elegir a una persona a cargo </option>
-                @foreach (Shopping.Core.Persona persona in Model.Item2)
+                @foreach (Shopping.Core.Persona persona in Model.Personas)
                 {
-                    <option value="Item2.Id"> @persona.Nombre </option>
+                    <option value="@persona.Id"> @persona.Nombre </option>
                 }
             </select>
         </div>

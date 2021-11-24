@@ -1,6 +1,7 @@
+using System;
 using Microsoft.AspNetCore.Mvc; 
 using Shopping.Core; 
-using System;
+using Shopping.ViewModels; 
 
 namespace Shopping.MVC.Controllers
 {
@@ -22,26 +23,21 @@ namespace Shopping.MVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult DarAltaLocal()
+        public IActionResult DarAltaLocal(int Id)
         {
-            var tupla = Tuple.Create(new Local(), Repositorio.Personas);
-            return View(tupla);
-        }
-
-        [HttpGet]
-        public IActionResult DarAltaLocal(int? IdPersonaSeleccionada)
-        {
-            var tupla = Tuple.Create(new Local(), Repositorio.Personas);
+            var vmLocal = new VMLocal(Repositorio.Personas);
             {
-                IdPersonaSeleccionada = Repositorio.Personas.Id;
+                vmLocal.IdPersonaSeleccionada = Id;
             }
-            return View(tupla);
+            return View(vmLocal);
         }
 
         [HttpPost]
-        public IActionResult DarAltaLocal([Bind(Prefix = "Item1")]Local local)
+        public IActionResult DarAltaLocal(VMLocal vMLocal)
         {
-            Repositorio.AgregarLocal(local); 
+            var persona = Repositorio.GetPersona(vMLocal.IdPersonaSeleccionada.Value);
+            vMLocal.Local.Persona = persona;
+            Repositorio.AgregarLocal(vMLocal.Local);
             return View("Index", Repositorio.Locales); 
         }
     }

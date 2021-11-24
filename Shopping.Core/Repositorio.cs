@@ -38,7 +38,5 @@ namespace Shopping.Core
         }
 
         static readonly List<Registro> registros = new List<Registro>();
-
-
     }
 }
