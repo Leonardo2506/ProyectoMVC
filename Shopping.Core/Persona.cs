@@ -12,11 +12,13 @@ namespace Shopping.Core
 
         public string Apellido {get; set;}
 
-        public List<Local> locales {get; set;}
+        public List<Local> Locales {get; set;}
 
         public Persona()
         {
-            locales = new List<Local>{};
+            Locales = new List<Local>{};
         }
+
+        public void AgregarLocal(Local local) => Locales.Add(local);   
     }
 }

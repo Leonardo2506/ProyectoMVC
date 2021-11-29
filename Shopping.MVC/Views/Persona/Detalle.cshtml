@@ -1,6 +1,6 @@
-@model Shopping.Core.Persona
+@model Shopping.Core.Persona;
 @{
-   Layout = null;  
+    Layout = null;  
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -18,14 +18,13 @@
     <hr>
     <table>
         <thead>
-            <tr><td>Local</td><td>Detalle Del Local</td></tr>
+            <tr><td>Local</td></tr>
         </thead>
         <tbody>
-            @foreach(Shopping.Core.Local local in Model.locales)
+            @foreach(Shopping.Core.Local local in Model.Locales)
             {
                 <tr>
                     <td>@local.Nombre</td>
-                    <td><a asp-controller="Local" asp-action="Detalle" asp-route-id="@local.Sucursal"></a></td>
                 </tr>
             }
         </tbody>

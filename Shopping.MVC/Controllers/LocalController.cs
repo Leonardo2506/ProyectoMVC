@@ -38,6 +38,7 @@ namespace Shopping.MVC.Controllers
             var persona = Repositorio.GetPersona(vMLocal.IdPersonaSeleccionada.Value);
             vMLocal.Local.Persona = persona;
             Repositorio.AgregarLocal(vMLocal.Local);
+            persona.AgregarLocal(vMLocal.Local);
             return View("Index", Repositorio.Locales); 
         }
     }
