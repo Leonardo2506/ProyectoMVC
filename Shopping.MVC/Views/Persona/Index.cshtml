@@ -2,26 +2,20 @@
 @{
     Layout = "_Layout3";
 }
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registro Local - Persona</title>
-</head>
 
-<body>
+<div class="nivel2">
     <h4> Persona a Cargo </h4>
+</div>
 
+
+<div class="nivel2b">
     <a asp-action="DarAltaPersona"> Ingrese aqui a una persona a Cargo</a><br />
     @foreach (Shopping.Core.Persona persona in Model)
     {
         <ul>
-            <li><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Apellido, @persona.Nombre</a></li>
+            <li><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Apellido,
+                    @persona.Nombre</a></li>
         </ul>
     }
-</body>
-
-</html>
+</div>
