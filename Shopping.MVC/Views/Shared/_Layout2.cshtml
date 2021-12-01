@@ -1,19 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Shopping.MVC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="~/css/site.css">
 </head>
 <body>
-    <div class="container is-max-desktop">
-        <div class="notification is-primary"> 
-            <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <section class="hero is-info">
+        <div class="hero-body">
+            <p class="subtible">
                 @RenderBody()
-            </nav>        
+            </p>
         </div>
-    </div>
+    </section>
 </body>
 </html>

@@ -1,46 +1,32 @@
 @using Shopping.ViewModels;
 @model VMLocal;
-@{
-    Layout = null; 
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registro Local - Local</title>
-</head>
-<body>
-    <form action="DarAltaLocal" method="post">
-        <div asp-validation-summary = "All"></div>
-        
-        <div>
-            <label asp-for="Local.Nombre"> Nombre: </label>
-            <input asp-for="Local.Nombre">
-        </div>
+<form action="DarAltaLocal" method="post">
+    <div asp-validation-summary="All"></div>
 
-        <div>
-            <label asp-for="Local.Direccion"> Direccion: </label>
-            <input asp-for="Local.Direccion">
-        </div>
+    <div class="nivel1">
+        <label asp-for="Local.Nombre"> Nombre: </label>
+        <input asp-for="Local.Nombre">
+    </div>
 
-        <div>
-            <label asp-for="Local.CantMax"> Capacidad: </label>
-            <input asp-for="Local.CantMax">
-        </div>
+    <div class="nivel1">
+        <label asp-for="Local.Direccion"> Direccion: </label>
+        <input asp-for="Local.Direccion">
+    </div>
 
-        <div>
-            <select asp-for="IdPersonaSeleccionada">
-                <option value=""> Elegir a una persona a cargo </option>
-                @foreach (Shopping.Core.Persona persona in Model.Personas)
-                {
-                    <option value="@persona.Id"> @persona.Nombre </option>
-                }
-            </select>
-        </div>
+    <div class="nivel1">
+        <label asp-for="Local.CantMax"> Capacidad: </label>
+        <input asp-for="Local.CantMax">
+    </div>
 
-        <button type="submit">Enviar Datos </button>
-    </form>
-</body>
-</html>
+    <div>
+        <select asp-for="IdPersonaSeleccionada">
+            <option value=""> Elegir a una persona a cargo </option>
+            @foreach (Shopping.Core.Persona persona in Model.Personas)
+            {
+                <option value="@persona.Id"> @persona.Nombre </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit">Enviar Datos </button>
+</form>
