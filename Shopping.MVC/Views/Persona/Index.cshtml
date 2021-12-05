@@ -4,17 +4,17 @@
 }
 
 
-<div class="nivel2">
-    <h4> Persona a Cargo </h4>
+<div>
+    <h4 class="nivel2"> Persona a Cargo </h4>
 </div>
 
 
-<div class="nivel2b">
+<div class="nivel2a">
     <a asp-action="DarAltaPersona"> Ingrese aqui a una persona a Cargo</a><br />
     @foreach (Shopping.Core.Persona persona in Model)
     {
         <ul>
-            <li><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Apellido,
+            <li class="nivel2b"><a asp-controller="Persona" asp-action="Detalle" asp-route-id="@persona.Id">@persona.Apellido,
                     @persona.Nombre</a></li>
         </ul>
     }

@@ -22,8 +22,29 @@
 .nivel2{
     font-style: italic;
     color: black;
+    text-decoration-line:underline;
 }
 
 .nivel2a{
-    margin-bottom: 10px;
+    color: blue;
+    padding-top: 20px;
+}
+
+.nivel2b{
+    color: blueviolet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 10px;
+}
+
+.nivel3{
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.nivel3a{
+    padding-top: 10px;
+}
+
+.nivel4{
+    
 }
