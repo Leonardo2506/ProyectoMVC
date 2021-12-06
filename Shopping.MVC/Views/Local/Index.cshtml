@@ -1,39 +1,33 @@
-@model IEnumerable<Shopping.Core.Local> 
+@model IEnumerable<Shopping.Core.Local>
 @{
     Layout = "_Layout3";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registro Local - Sucursal </title>
-</head>
-<body>
-    <h4> Creacion de Local </h4>
 
-    <a asp-action="DarAltaLocal"> Ingrese aqui los datos para crear el local</a><br />
-    <table>
-        <thead>
-            <tr>
-                <td> Nombre</td>
-                <td> Direccion</td>
-                <td> Cantidad Maxima</td>
-            </tr>
-        </thead>
-            <tbody>
-                @foreach (Shopping.Core.Local local in Model)
-                {
-                    <tr>
-                        <td><a asp-controller="Local" asp-action="Detalle" asp-route-sucursal="@local.Sucursal"> @local.Nombre</a></td>
-                        <td><a asp-controller="Local" asp-action="Detalle" asp-route-sucursal="@local.Sucursal"> @local.Direccion</a></td>
-                        <td><a asp-controller="Local" asp-action="Detalle" asp-route-sucursal="@local.Sucursal"> @local.CantMax</a></td>
-                    </tr>
-                }
-            </tbody>
-    </table>
+<h4 class="nivel6"> Creacion de Local </h4>
 
-        <a asp-controller="Persona" asp-action="Index"> Volver a Personas </a> <br />
-</body>
-</html>
+<div class="nivel6a">
+    <a class="nivel6a" asp-action="DarAltaLocal"> Ingrese aqui los datos para crear el local</a><br />
+</div>
+
+
+<div class="nivel6b">
+    <tr>
+        <td> Nombre: </td>
+    </tr>
+
+
+    @foreach (Shopping.Core.Local local in Model)
+    {
+        <ul class="nivel6c">
+            <li><a asp-controller="Local" asp-action="Detalle" asp-route-sucursal="@local.Sucursal"> @local.Nombre</a>
+            </li>
+        </ul>
+    }
+</div>
+
+<div class="nivel6d">
+    <a class="nivel6e" asp-controller="Persona" asp-action="Index"> Volver a Personas </a> <br />
+</div>
+
+
+

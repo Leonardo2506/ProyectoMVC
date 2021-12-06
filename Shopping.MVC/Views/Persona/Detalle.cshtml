@@ -1,34 +1,25 @@
 @model Shopping.Core.Persona;
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Persona - Detalle </title>
-</head>
-<body>
-    <div>
-        <h3> Nombre: @Model.Nombre </h3>
-        <h3> Apellido: @Model.Apellido </h3>
-    </div>
-    <hr>
-    <table>
-        <thead>
-            <tr><td>Local</td></tr>
-        </thead>
-        <tbody>
-            @foreach(Shopping.Core.Local local in Model.Locales)
-            {
-                <tr>
-                    <td>@local.Nombre</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <hr/>
-    <a asp-controller="Local" asp-action="Index"> Agregar Locales</a> <br />
-    <a asp-action="Index" > Volver a inicio </a>
-</body>
-</html>
+<div>
+    <h3 class="nivel5"> Nombre: @Model.Nombre </h3>
+    <h3 class="nivel5"> Apellido: @Model.Apellido </h3>
+</div>
+<hr>
+<table>
+    <thead>
+        <tr class="nivel5a">
+            <td>Local</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Shopping.Core.Local local in Model.Locales)
+        {
+            <tr>
+                <td class="nivel5b">@local.Nombre</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<a class="nivel5c" asp-controller="Local" asp-action="Index"> Agregar Locales </a> <br />
+<a class="nivel5c" asp-action="Index"> Volver a inicio </a>

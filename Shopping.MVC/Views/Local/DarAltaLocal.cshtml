@@ -3,22 +3,22 @@
 <form action="DarAltaLocal" method="post">
     <div asp-validation-summary="All"></div>
 
-    <div class="nivel1">
+    <div class="nivel7">
         <label asp-for="Local.Nombre"> Nombre: </label>
         <input asp-for="Local.Nombre">
     </div>
 
-    <div class="nivel1">
+    <div class="nivel7">
         <label asp-for="Local.Direccion"> Direccion: </label>
         <input asp-for="Local.Direccion">
     </div>
 
-    <div class="nivel1">
+    <div class="nivel7">
         <label asp-for="Local.CantMax"> Capacidad: </label>
         <input asp-for="Local.CantMax">
     </div>
 
-    <div>
+    <div class="nivel7a">
         <select asp-for="IdPersonaSeleccionada">
             <option value=""> Elegir a una persona a cargo </option>
             @foreach (Shopping.Core.Persona persona in Model.Personas)
@@ -27,6 +27,9 @@
             }
         </select>
     </div>
-
-    <button type="submit">Enviar Datos </button>
+        
+    <div class="nivel7b">
+        <button type="submit">Enviar Datos </button>
+    </div>
+    
 </form>

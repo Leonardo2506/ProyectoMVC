@@ -46,5 +46,94 @@
 }
 
 .nivel4{
-    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: black;
+}
+
+.nivel4a{
+    padding-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: gold;
+}
+
+.nivel5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkviolet;
+}
+
+.nivel5a{
+    text-decoration-line:underline;
+    color: black;
+}
+
+.nivel5b{
+    color:maroon;
+    font-style: italic;
+}
+
+.nivel5c{
+    background-color: darkslategray;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.nivel6{
+    font-style: italic;
+    color: black;
+    text-decoration-line:underline;
+}
+
+.nivel6a{
+    padding-top: 10px;
+    color: blue;
+}
+
+.nivel6b{
+    padding-top: 10px;
+    color:red;
+}
+
+.nivel6c{
+    color: blueviolet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nivel6d{
+    padding-top: 40px;
+    padding-left: 450px;
+}
+
+.nivel6e {
+    background-color: darkblue;
+}
+
+.nivel7{
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.nivel7a{
+    padding-top: 10px;
+}
+
+.nivel7b{
+    padding-left: 450px;
+}
+
+.nivel8{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkviolet;
+}
+.nivel8a{
+    color: black;
+    font-style: italic;
+}
+
+.nivel8b{
+        background-color: darkslategray;
+        margin-left: 120px;
+        margin-right: 120px;
 }

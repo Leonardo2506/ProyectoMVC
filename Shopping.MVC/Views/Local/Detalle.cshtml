@@ -1,27 +1,22 @@
 @model Shopping.Core.Local;
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Local - Detalle</title>
-</head>
-<body>
-    <div> 
-        <h3> Nombre: @Model.Nombre </h3>    
-    </div>
-    <hr>
-    <table class="nivel2">
-        <thead>
-            <tr><td> Direccion: @Model.Direccion</td></tr> 
-            <tr><td> Cantidad Maxima: @Model.CantMax </td></tr>
-            <tr><td> Persona a Cargo: @Model.Persona.Nombre </td></tr>
-        </thead>
-    </table>
-    <hr/>
-    <a asp-controller="Persona" asp-action="Index"> Agregar Persona</a>
-    <a asp-action="Index" > Volver a inicio</a>
-</body>
-</html>
+<div>
+    <h3 class="nivel8"> Nombre: @Model.Nombre </h3>
+</div>
+<hr>
+<table>
+    <thead>
+        <tr class="nivel8a">
+            <td> Direccion: @Model.Direccion</td>
+        </tr>
+        <tr class="nivel8a">
+            <td> Cantidad Maxima: @Model.CantMax </td>
+        </tr>
+        <tr class="nivel8a">
+            <td> Persona a Cargo: @Model.Persona.Nombre </td>
+        </tr>
+    </thead>
+</table>
+<hr />
+<a class="nivel8b" asp-controller="Persona" asp-action="Index"> Agregar Persona</a> <br />
+<a class="nivel8b" asp-action="Index"> Volver a inicio</a>
